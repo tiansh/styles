@@ -1,12 +1,6 @@
 = 网页微信适应窗口大小 =
+* https://userstyles.org/styles/114616
 
-一个让网页微信可以自动适应窗口大小的样式（脚本）。
+一个让网页微信可以自动适应窗口大小的 Stylish 样式
+* 源代码：https://github.com/tiansh/styles/blob/master/Resizable_Web_WeChat.css
 
-* 用户样式：https://userstyles.org/styles/114616
-* 用户脚本：https://tiansh.github.io/us-wechat/Resizable_Web_WeChat.html
-
-脚本目前和样式没有任何区别，只是把样式打包成了用户脚本。
-
-----
-
-以前那些网页QQ的脚本都被迫坑掉了，这个求不坑……
