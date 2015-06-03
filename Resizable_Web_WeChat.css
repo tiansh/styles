@@ -9,15 +9,19 @@
   .chatPanel { padding: 40px 0 0; }
   
   .listContentWrap { padding-top: 72px; }
-  .listContentWrap > div:first-child { margin-top: -72px; height: calc(100% + 72px) !important; }
+  .listContentWrap > div { margin-top: -72px; height: calc(100% + 72px) !important; }
   .list .chatLeftPanelShadow { display: none; }
   
   .chatPanel .chatScorll { padding-top: 72px; min-height: initial; }
-  .chatPanel .chatMainPanel { margin-top: -72px; }
+  .chatPanel .chatMainPanel, .chatDetails { margin-top: -72px; top: auto !important; }
+  .chatDetails .participant { height: calc(100vh - 154px) !important;; }
   .chatPanel .chatContainer { padding-top: 72px; }
   .me .cloud, .you .cloud  { max-width: 419px; }
   .chatPanel { width: 962px; }
   .chatPanel .chatInput { width: 391px; }
+  
+  .createNewChat .friendList { max-height: calc(100vh - 274px); }
+  .createNewChat .selectGroupContainer, .createNewChat .selectGroupContainer .friendList { height: calc(100vh - 142px) !important; }
   
   @media screen and (max-width: 1002px) {
     .chatPanel { width: calc(100vw - 40px); }
