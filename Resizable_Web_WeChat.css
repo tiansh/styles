@@ -54,17 +54,22 @@
     .chatPanel .cloud .file .fileIcon { display: block; z-index: 1000; }
     .chatPanel { width: 100%; padding: 0; }
     .chatPanel .chatScorll { padding-top: 133px; }
-    .chatPanel .chatMainPanel { margin-top: -133px; }
+    .chatPanel .chatMainPanel, .chatDetails { margin-top: -133px; }
     .chatPanel .chatContainer { padding-top: 133px; }
+    .chatDetails .participant { height: calc(100vh - 103px) !important; }
     .chatPanel .list { top: 30px; }
     .chatPanel .myProfile .avatar, .chatPanel .myProfile img { border-radius: 50%; }
     #chat_leftpanel:hover { left: 0px; }
-    #chat_leftpanel::after { width: 40px; }
+    #chat_leftpanel::after { width: 40px; height: calc(100% - 32px); top: 12px; transition: width ease 0.2s 0.3s; }
+    #chat_leftpanel:hover::after { width: 0; transition: width ease 0.1s; }
      .chatPanel .chatInput { width: calc(100vw - 54px); }
   }
   
   @media screen and (max-width: 300px) {
     .chatPanel .list { display: none !important; }
   }
+  
+  .chatPanel .chatMainPanel[style*="left: 0"] ~ .chatDetails { display: none !important; }
 
 }
+
