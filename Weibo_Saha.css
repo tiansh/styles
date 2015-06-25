@@ -1,0 +1,19 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("weibo.com") {
+
+  .WB_feed_type .WB_feed_handle .WB_row_line .line .icon_praised_b,
+  .WB_feed_type .WB_feed_handle .WB_row_line .line .icon_praised_bc,
+  .WB_func .WB_handle li .line span .icon_praised_b,
+  .WB_func .WB_handle li .line span .icon_praised_bc
+  { display: none; }
+  .WB_feed_type .WB_feed_handle .WB_row_line .line .icon_praised_b ~ em::before,
+  .WB_feed_type .WB_feed_handle .WB_row_line .line .icon_praised_bc ~ em::before,
+  .WB_func .WB_handle li .line span .icon_praised_b ~ em::before,
+  .WB_func .WB_handle li .line span .icon_praised_bc ~ em::before
+  { content: "朕知道了 "; } 
+  .WB_feed_type .WB_feed_handle .WB_row_line .line .icon_praised_bc ~ em,
+  .WB_func .WB_handle li .line span .icon_praised_bc ~ em
+  { color: #eb7350 }
+  
+}
