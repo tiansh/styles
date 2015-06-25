@@ -1,75 +1,29 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document domain("wx.qq.com") {
-
-  html, body { min-height: 300px; }
-  body { overflow: hidden; }
-  .panelBackground, .footer { display: none; }
-  #swfUploaderContainer { display: none; }
-  .chatPanel { padding: 40px 0 0; }
   
-  .listContentWrap { padding-top: 72px; }
-  .listContentWrap > div { margin-top: -72px; height: calc(100% + 72px) !important; }
-  .list .chatLeftPanelShadow { display: none; }
-  
-  .chatPanel .chatScorll { padding-top: 72px; min-height: initial; }
-  .chatPanel .chatMainPanel, .chatDetails { margin-top: -72px; top: auto !important; }
-  .chatDetails .participant { height: calc(100vh - 154px) !important;; }
-  .chatPanel .chatContainer { padding-top: 72px; }
-  .me .cloud, .you .cloud  { max-width: 419px; }
-  .chatPanel { width: 962px; }
-  .chatPanel .chatInput { width: 391px; }
-  
-  .createNewChat .friendList { max-height: calc(100vh - 274px); }
-  .createNewChat .selectGroupContainer, .createNewChat .selectGroupContainer .friendList { height: calc(100vh - 142px) !important; }
-  
-  @media screen and (max-width: 1002px) {
-    .chatPanel { width: calc(100vw - 40px); }
-    .chatPanel .chatInput { width: calc(100vw - 611px); }
-    .me .cloud, .you .cloud  { max-width: calc(100vw - 583px); }  
-    .chatPanel .chatInput { width: calc(100vw - 611px); }
-  }
-  
-  .chatPanel .chatNameWrap .chatName { max-width: calc(100% - 80px); }
+  .main { min-height: 400px; }
+  .main_inner { min-width: 300px; max-width: none; }
+  .chat .box_ft .content { padding-left: 20px; }
+  .chat .box_ft .content .flex { background: #fafafa; border: 0; padding: 9px 14px; border-radius: 4px; height: 60px; border: #ccc 1px solid; }
   
   @media screen and (max-width: 800px) {
-    #chat_leftpanel { position: absolute; left: -290px; transition: left ease 0.2s 0.3s; }
-    #chat_leftpanel:hover { left: -20px; transition: left ease 0.1s; }
-    #vernierContainer { display: none; }
-    
-    .me .cloud, .you .cloud  { max-width: calc(100vw - 271px); }  
-    .chatPanel .chat { margin-left: 0; }
-    .chatPanel .chatInput { width: calc(100vw - 299px); }
-    
-    #chat_leftpanel::after { content: ""; display: block; width: 20px; height: calc(100% + 10px); position: absolute; top: 0; left: 276px; }
+    .panel { position: absolute; left: -280px; top: 0; z-index: 10000; transition: left 0.2s ease 0.3s; box-shadow: 4px 0 6px rgba(46, 50, 56, 0.5); }
+    .panel:hover { left: 0; transition: left 0.1s ease; }
+    .panel::after { content: " "; display: block; width: 10px; position: fixed; top: 0; bottom: 0; left: 0; }
+    .panel:hover::after { left: -10px;  transition: left 0s ease 0.1s; }
+    .search_bar .frm_search { width: 206px; }
   }
   
-  @media screen and (max-width: 480px) {
-    #sendEmojiIcon, #screenSnapIcon, #sendFileIcon, a.chatSend { display: none; }
-    .chatPanel .chatInput { width: calc(100vw - 94px); }
-    .me .cloud, .you .cloud  { max-width: calc(100vw - 114px); }
+  @media screen and (max-height: 600px) {
+    .chat .box_ft { height: 90px; text-align: right; padding-top: 10px; }
+    .chat .box_ft > * { text-align: left; }
+    .chat .box_ft .toolbar { position: relative; z-index: 101; display: inline-block; padding: 5px 0; }
+    .chat .box_ft .content { position: relative; z-index: 100; margin: -40px 0 -35px 0; height: 60px; padding: 10px 120px 0px 20px; }
+    .chat .box_ft .content .flex { height: 40px; }
+    .chat .box_ft .desc { display: none; }
+    .chat .box_ft .action { position: relative; z-index: 101; float: right; }  
+    .btn_send { padding-left: 32px; padding-right: 32px; }
   }
-  
-  @media screen and (max-width: 360px) {
-    .chatPanel .cloud .file .fileIcon { display: block; z-index: 1000; }
-    .chatPanel { width: 100%; padding: 0; }
-    .chatPanel .chatScorll { padding-top: 133px; }
-    .chatPanel .chatMainPanel, .chatDetails { margin-top: -133px; }
-    .chatPanel .chatContainer { padding-top: 133px; }
-    .chatDetails .participant { height: calc(100vh - 103px) !important; }
-    .chatPanel .list { top: 30px; }
-    .chatPanel .myProfile .avatar, .chatPanel .myProfile img { border-radius: 50%; }
-    #chat_leftpanel:hover { left: 0px; }
-    #chat_leftpanel::after { width: 40px; height: calc(100% - 32px); top: 12px; transition: width ease 0.2s 0.3s; }
-    #chat_leftpanel:hover::after { width: 0; transition: width ease 0.1s; }
-     .chatPanel .chatInput { width: calc(100vw - 54px); }
-  }
-  
-  @media screen and (max-width: 300px) {
-    .chatPanel .list { display: none !important; }
-  }
-  
-  .chatPanel .chatMainPanel[style*="left: 0"] ~ .chatDetails { display: none !important; }
-
 }
 
