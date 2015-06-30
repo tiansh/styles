@@ -4,3 +4,13 @@
 一个让网页微信可以自动适应窗口大小的 Stylish 样式
 * 源代码：https://github.com/tiansh/styles/blob/master/Resizable_Web_WeChat.css
 
+= 微博“朕知道了” =
+* https://userstyles.org/styles/115611
+
+把微博的点赞按钮替换成“朕知道了”
+* 源代码 https://github.com/tiansh/styles/blob/master/Weibo_Saha.css
+
+= 深色网页 =
+
+将网页颜色加深，适合低亮度环境下阅读
+* 源代码 https://github.com/tiansh/styles/blob/master/Darken_Pages.css
